@@ -14,11 +14,11 @@
   font-family: Roboto;
   cursor: pointer;
   user-select: none;
+  /* filter: brightness(50%); */
 }
 /* global ends  */
 
 /* body  */
-
 /* body ends  */
 
 /* background container starts  */
@@ -32,14 +32,14 @@
 .container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 5rem 60vh 10vh 50vh 100vh 60vh 225vh 70vh 130vh 200vh 100vh;
+  grid-template-rows: 5rem 60vh 10vh 50vh 100vh 60vh 225vh 70vh 130vh 250vh 100vh;
 }
 /* container ends  */
 
 /* menu starts  */
 .menu {
   background-color: black;
-  border-bottom: 5px solid var(--orange);
+  border-bottom: 3px solid var(--orange);
   grid-row: 1/2;
   grid-column: 1/-1;
   display: grid;
@@ -47,28 +47,7 @@
   padding: 10px 5rem;
   transition: all 1000ms ease;
 }
-.menu:hover {
-  background-color: var(--orange);
-  border-bottom: 5px solid black;
-  transition: all 1000ms ease;
-}
-.menu:hover h1 {
-  color: #000;
-}
-.menu:hover h1 span {
-  color: white;
-}
-.menu:hover ul li a {
-  color: white;
-}
-.menu:hover button {
-  background-color: #000;
-  outline: none;
-}
-.menu:hover button a {
-  color: white;
-  
-}
+
 
 /* menu children starts  */
 /* menu h1 starts  */
@@ -96,7 +75,7 @@
   list-style: none;
 }
 .menu > ul > li:hover {
-  border-bottom: 5px solid black;
+  border-bottom: 2px solid white;
   transition: all 500ms ease;
 }
 .menu > ul > li > a {
@@ -107,7 +86,7 @@
   color: white;
 }
 .menu > ul > li > a:hover {
-  color: black;
+  color: var(--orange);
   transition: all 1000ms ease;
 }
 
@@ -115,23 +94,28 @@
 
 /* menu button starts here  */
 .menu > button {
+  height: 3rem;
+  width: 8rem;
+  align-self: center;
   border-radius: 3rem;
   outline: none;
-  background-color: var(--orange);
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 .menu > button:hover {
   outline: none;
+
 }
 .menu > button > a {
   color: black;
   font-family: Roboto;
-  font-size: 1.3rem;
-  font-weight: 500;
+  font-size: 1rem;
+  /* font-weight: 700; */
   text-decoration: none;
 
 }
 .menu > button:hover a {
-  font-size: 1rem;
+  font-size: 0.93rem;
   transition: all 1000ms ease;
 }
 /* menu button ends here  */
@@ -151,14 +135,14 @@
   font-family: Roboto;
   font-size: 2rem;
   font-weight: 600;
-  color: var(--orange);
+  color: black;
   padding-left: 1rem;
 }
 .hero1 > h1 {
   font-family: Roboto;
   font-size: 8rem;
   font-weight: 900;
-  background-color: var(--orange);
+  background-color: black;
   color: white;
   margin-bottom: 0.8rem;
   padding: 1rem;
@@ -200,7 +184,7 @@
 .hero1 > h2 {
   font-family: Roboto;
   font-size: 2.5rem;
-  color: var(--orange);
+  color: black;
   padding-left: 1rem;
   text-align: center;
 }
@@ -341,15 +325,16 @@
 .pricing > div > .top {
   grid-column: 1/-1;
   grid-row: 1/3;
-  background: var(--orange);
+  background: black;
 }
 .pricing > div > button {
   grid-row: 1/2;
   background: white;
   grid-column: 4/10;
   z-index: 3;
-  color: var(--orange);
-  font-size: 1.3rem;
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
   border-radius: 0 20px;
   border: none;
 }
@@ -361,7 +346,7 @@
 .pricing > div > h1 {
   grid-row: 3/5;
   grid-column: 5/10;
-  color: var(--orange);
+  color: black;
   padding-top: 2rem;
 }
 .pricing > div > .details {
@@ -391,6 +376,7 @@
   grid-column: 2/3;
   color: var(--orange);
   user-select: none;
+  font-size: 0.8rem;
 }
 .pricing > div > .details > div > p:hover {
   transform: translate(5px, 0);
@@ -825,12 +811,106 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   gap: 3rem;
-  padding: 3rem 7rem;
+  padding: 3rem 10rem;
 }
 
 /* portfolio children starts  */
+
+/* portfolio front cards starts  */
+.portfolio-ok>.front-card{
+  display: grid;
+  grid-template-rows:3.5fr 1fr;
+  transition: all 0.3s ease;
+
+}
+
+/* portfolio front cards children starts  */
+.portfolio-ok>.front-card>.image-div{
+  grid-row: 1/2;
+  background: red;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+.portfolio-ok>.front-card>.image-div>img{
+  grid-column: 1/2;
+  grid-row: 1/2;
+  height: 100%;
+  width: 100%;
+  filter: brightness(25%);
+}
+.portfolio-ok>.front-card>.info-div{
+  grid-row: 2/3;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.portfolio-ok>.front-card>.info-div>a{
+  text-decoration: none;
+  font-size: 2rem;
+  color: black;
+  font-weight: 500;
+  border-bottom: 4px solid var(--orange);
+}
+.portfolio-ok>.front-card>.info-div>a:hover{
+  border-bottom: 4px solid orange;
+  font-size: 1.95rem;
+  transition: all 0.3s ease;
+}
+.portfolio-ok>.front-card>.info-div>i{
+  font-size: 2rem;
+}
+/* portfolio cards children ends  */
+/* porfolio front cards ends  */
+
+
+
+/* portfolio back cards starts  */
+.portfolio-ok>.back-card{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+  background:  linear-gradient(#0000, #434343);
+}
+/* backcards children starts  */
+.back-card>h1{
+  font-size: 2rem;
+  color: var(--orange);
+  text-align: start;
+  /* background: var(--orange); */
+}
+.back-card>p{
+  font-size: 1rem;
+  color: white;
+  text-align: start;
+}
+.back-card>button{
+  height: 3rem;
+  width: 8rem;
+  background: var(--orange);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 3rem;
+  border: none;
+}
+.back-card>button:hover{
+  transform: translate(0,3px);
+}
+.back-card>button>a{
+  text-decoration: none;
+  font-size: 1rem;
+  color: white;
+}
+
+/* backcards children ends  */
+/* portfolio back cards ends  */
 .portfolio-ok>div{
   box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
 }
 .portfolio-ok>div:nth-child(1){
   grid-column: 1/2;
@@ -857,6 +937,37 @@
   grid-row: 3/4;
 }
 
+.portfolio-ok>.back-card:nth-child(7){
+  grid-column: 1/2;
+  grid-row: 1/2;
+  
+  
+}
+.portfolio-ok>.back-card:nth-child(8){
+  grid-column: 2/3;
+  grid-row: 1/2;
+  
+}
+.portfolio-ok>.back-card:nth-child(9){
+  grid-column: 1/2;
+  grid-row: 2/3;
+  
+}
+.portfolio-ok>.back-card:nth-child(10){
+  grid-column: 2/3;
+  grid-row: 2/3;
+  
+}
+.portfolio-ok>.back-card:nth-child(11){
+  grid-column: 1/2;
+  grid-row: 3/4;
+  
+}
+.portfolio-ok>.back-card:nth-child(12){
+  grid-column: 2/3;
+  grid-row: 3/4;
+  
+}
 
 
 
@@ -875,3 +986,7 @@
 #hidden {
   display: none;
 }
+.hidden-one{
+  display: none;
+}
+
