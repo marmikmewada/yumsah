@@ -1,0 +1,877 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;900&display=swap");
+/* global  */
+:root {
+  --menu-color: rgb(21, 34, 49);
+  --orange: rgb(243, 108, 44);
+  --font-white: #ffffff;
+  --font-grey: #7a7a7a;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: Roboto;
+  cursor: pointer;
+  user-select: none;
+}
+/* global ends  */
+
+/* body  */
+
+/* body ends  */
+
+/* background container starts  */
+.background-container {
+  width: 100vw;
+  /* filter: brightness(20%); */
+}
+/* background container ends  */
+
+/* container starts  */
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 5rem 60vh 10vh 50vh 100vh 60vh 225vh 70vh 130vh 200vh 100vh;
+}
+/* container ends  */
+
+/* menu starts  */
+.menu {
+  background-color: black;
+  border-bottom: 5px solid var(--orange);
+  grid-row: 1/2;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 4fr 2fr 1fr;
+  padding: 10px 5rem;
+  transition: all 1000ms ease;
+}
+.menu:hover {
+  background-color: var(--orange);
+  border-bottom: 5px solid black;
+  transition: all 1000ms ease;
+}
+.menu:hover h1 {
+  color: #000;
+}
+.menu:hover h1 span {
+  color: white;
+}
+.menu:hover ul li a {
+  color: white;
+}
+.menu:hover button {
+  background-color: #000;
+  outline: none;
+}
+.menu:hover button a {
+  color: white;
+  
+}
+
+/* menu children starts  */
+/* menu h1 starts  */
+.menu > h1 {
+  grid-column: 1/2;
+  align-self: center;
+  font-family: Roboto;
+  color: white;
+  font-weight: 600;
+}
+.menu > h1 > span {
+  color: var(--orange);
+  font-weight: 900;
+  font-size: 2.5rem;
+}
+/* menu h1 ends  */
+
+/* menu ul starts  */
+.menu > ul {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.menu > ul > li {
+  list-style: none;
+}
+.menu > ul > li:hover {
+  border-bottom: 5px solid black;
+  transition: all 500ms ease;
+}
+.menu > ul > li > a {
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: Roboto;
+  /* color: white; */
+  color: white;
+}
+.menu > ul > li > a:hover {
+  color: black;
+  transition: all 1000ms ease;
+}
+
+/* menu ul ends  */
+
+/* menu button starts here  */
+.menu > button {
+  border-radius: 3rem;
+  outline: none;
+  background-color: var(--orange);
+}
+.menu > button:hover {
+  outline: none;
+}
+.menu > button > a {
+  color: black;
+  font-family: Roboto;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+
+}
+.menu > button:hover a {
+  font-size: 1rem;
+  transition: all 1000ms ease;
+}
+/* menu button ends here  */
+/* menu children ends  */
+/* menu ends  */
+
+/* hero starts  */
+.hero {
+  grid-row: 2/3;
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.hero1 > h3 {
+  font-family: Roboto;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--orange);
+  padding-left: 1rem;
+}
+.hero1 > h1 {
+  font-family: Roboto;
+  font-size: 8rem;
+  font-weight: 900;
+  background-color: var(--orange);
+  color: white;
+  margin-bottom: 0.8rem;
+  padding: 1rem;
+  transition: all 1000ms ease;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 8px;
+
+  /* animaton  */
+
+  animation-name: my-animation-h1;
+  animation-duration: 8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes my-animation-h1 {
+  from {
+    background-color: var(--orange);
+
+    color: white;
+  }
+  to {
+    /* background-color: white; */
+    background: white;
+    /* color: var(--orange); */
+    box-shadow: none;
+  }
+}
+/* enimation ends  */
+
+.hero1 > .border {
+  height: 0.6rem;
+  background-color: var(--orange);
+  width: 40rem;
+}
+.hero1 > h2 {
+  font-family: Roboto;
+  font-size: 2.5rem;
+  color: var(--orange);
+  padding-left: 1rem;
+  text-align: center;
+}
+.hero1 > p {
+  font-family: Roboto;
+  font-size: 1.4rem;
+  font-weight: 500;
+  background: var(--orange);
+  color: white;
+  /* padding-left: 1rem; */
+  text-align: center;
+}
+
+/* hero 2 starts  */
+
+/* trash  */
+.hero2 {
+  grid-row: 3/4;
+  grid-column: 1/-1;
+  gap: 1rem;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.hero2 > div {
+  /* overflow:hidden; */
+
+  /* animation properties */
+  animation-name: my-animation;
+  animation-duration: 2s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  /* other properties */
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  position: relative;
+  left: 2rem;
+  right: 0;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+@keyframes my-animation {
+  from {
+    background-color: white;
+    width: 2rem;
+    /* top: 300px; */
+    /* overflow: hidden; */
+  }
+  to {
+    background-color: var(--orange);
+    width: 2rem;
+    /* top: 300px; */
+    left: 10rem;
+    /* overflow: hidden; */
+  }
+}
+
+/* trash  */
+/* hero ends  */
+
+/* details starts  */
+.details {
+  /* background: blue; */
+  grid-row: 4/5;
+  grid-column: 1/-1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+}
+/* details children start here  */
+.details > h2 {
+  font-size: 3rem;
+  color: var(--orange);
+  border-bottom: 4px solid var(--orange);
+  padding-bottom: 10px;
+}
+.details > p {
+  font-size: 1.5rem;
+}
+.details > h4 {
+  font-size: 2rem;
+  border-top: 4px solid var(--orange);
+  padding-top: 10px;
+}
+/* details children ends here  */
+/* details ends  */
+
+/* pricing starts  */
+.pricing {
+  /* background: grey; */
+  height: 100%;
+  grid-row: 5/6;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 0.8fr 0.8fr;
+  grid-template-rows: 80vh;
+  padding: 8rem;
+  gap: 4rem;
+  /* margin-bottom: 2rem; */
+}
+
+/* pricing children starts  */
+.pricing > div {
+  /* background: #222222; */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    border-radius: 30px;
+}
+/* starter starts  */
+
+
+/* starter children starts  */
+/* .pricing>div:hover{
+        transform: translate(0,20px);
+        transition: all 800ms ease;
+    } */
+.pricing > div:hover button {
+  font-size: 1rem;
+  transform: translate(0, 1.5rem);
+  grid-column: 4/10;
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+  transition: all 1000ms ease;
+}
+.pricing > div > .top {
+  grid-column: 1/-1;
+  grid-row: 1/3;
+  background: var(--orange);
+}
+.pricing > div > button {
+  grid-row: 1/2;
+  background: white;
+  grid-column: 4/10;
+  z-index: 3;
+  color: var(--orange);
+  font-size: 1.3rem;
+  border-radius: 0 20px;
+  border: none;
+}
+.pricing > div > button:hover {
+  font-size: 1rem;
+  transform: translate(0, 1.5rem);
+  transition: all 1000ms ease;
+}
+.pricing > div > h1 {
+  grid-row: 3/5;
+  grid-column: 5/10;
+  color: var(--orange);
+  padding-top: 2rem;
+}
+.pricing > div > .details {
+  grid-column: 1/-1;
+  grid-row: 4/-1;
+  display: grid;
+  grid-template-rows: repeat(9, 1fr);
+}
+.pricing > div > .details > div {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+}
+.pricing > div > .details > div > i {
+  grid-column: 1/2;
+  color: var(--orange);
+  font-size: 1rem;
+}
+.pricing > div > .details > div > i:nth-child(1) {
+  z-index: 10;
+}
+.pricing > div > .details > div > i:nth-child(2) {
+  /* z-index: 11; */
+  display: none;
+}
+
+.pricing > div > .details > div > p {
+  grid-column: 2/3;
+  color: var(--orange);
+  user-select: none;
+}
+.pricing > div > .details > div > p:hover {
+  transform: translate(5px, 0);
+  transition: all 800ms ease;
+}
+
+/* starter children ends  */
+/* starter ends  */
+
+/* pricing children ends  */
+
+/* pricing ends  */
+
+/* pricing quote starts  */
+.pricing-quote{
+  grid-row: 6/7;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  padding: 0 3rem;
+  background: #000;
+}
+.pricing-quote>div{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+}
+/* orange line  */
+.pricing-quote>div>div{
+  height: 10px;
+  background: var(--orange);
+  width: 30rem;
+}
+/* orange line ends  */
+
+.pricing-quote>div>i{
+  color: white;
+}
+.pricing-quote>div>h2{
+  color: var(--orange);
+}
+.pricing-quote>div>h1{
+  color: white;
+}
+.pricing-quote>div>p{
+  color: white;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+
+  /* pricing quote business quote one  */
+  .pricing-quote>div:nth-child(1){
+    grid-column: 1/2;
+
+  }
+  .pricing-quote>div:nth-child(1)>i{
+    font-size: 8rem;
+  }
+  /* pricing quote business quote one  ends */
+  /* pricing quote business quote two  */
+  .pricing-quote>div:nth-child(2){
+    grid-column: 2/3;
+  }
+  .pricing-quote>div:nth-child(2)>i{
+    font-size: 8rem;
+  }
+  /* pricing quote business quote two ends  */
+
+/* pricing quote ends  */
+
+/* transparent starts  */
+.transparent {
+  grid-row: 7/8;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  padding: 2rem;
+}
+/* transparent children starts  */
+.transparent > .quote {
+    grid-row: 1/2;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+}
+.transparent > .quote > .line1 {
+  height: 10px;
+  width: 80%;
+  background: var(--orange);
+}
+.transparent > .quote > h1 {
+  width: 50%;
+  color: var(--orange);
+  font-size: 3rem;
+  text-align: center;
+}
+.transparent > .quote > .line2 {
+  height: 10px;
+  width: 80%;
+  background: var(--orange);
+}
+.quote>i{
+    font-size: 12rem;
+}
+.quote >i {
+  animation-name: my-animation-quote-h1;
+  animation-duration: 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes my-animation-quote-h1 {
+  from {
+    color: var(--orange);
+
+    /* color: white; */
+  }
+  to {
+    
+    color: white;
+  }
+}
+
+.transparent>.blog{
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 3rem;
+}
+
+/* 2,3,5,6  */
+/* dark */
+/* 1,4,7,8,9 */
+/* light  */
+    /* blog children starts  */
+    .blog>div{
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .blog>div>p{
+        font-family: Roboto;
+        font-size: 0.8rem;
+        color: white;
+    }
+    .blog>div>p>span{
+        font-size: 1.2rem;
+    }
+    .blog>div:nth-child(1){
+        grid-column:2/4;
+        grid-row:1/2;
+        background: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+
+    .blog>div:nth-child(2){
+        grid-column:4/5;
+        grid-row:1/2;
+        background: var(--orange);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    .blog>div:nth-child(3){
+        grid-column:3/4;
+        grid-row:2/3;
+        background: var(--orange);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    .blog>div:nth-child(4){
+        grid-column: 4/5;
+        grid-row:2/3;
+        background: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .blog>div:nth-child(5){
+        grid-column: 2/3;
+        grid-row: 3/4;
+        background:var(--orange);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    .blog>div:nth-child(6){
+        grid-column: 4/5;
+        grid-row: 3/4;
+        background: var(--orange);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+    .blog>div:nth-child(7){
+        grid-column: 1/3;
+        grid-row: 4/5;
+        background: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .blog>div:nth-child(8){
+        grid-column: 3/4;
+        grid-row:3/5;
+        background: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .blog>div:nth-child(9){
+        grid-column: 4/5;
+        grid-row: 4/5;
+        background: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+
+    }
+    .blog>div:nth-child(10){
+        grid-column: 1/3;
+        grid-row: 5/6;
+        background: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .blog>div:nth-child(11){
+        grid-column: 3/5;
+        grid-row: 5/6;
+        background: var(--orange);
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+
+    /* blog utility  */
+        .blog>div:nth-child(1)>p{
+            color: var(--orange);
+        }
+        .blog>div:nth-child(4)>p{
+            color: var(--orange);
+        }
+        .blog>div:nth-child(7)>p{
+            color: var(--orange);
+        }
+        .blog>div:nth-child(8)>p{
+            color: var(--orange);
+        }
+        .blog>div:nth-child(9)>p{
+            color: var(--orange);
+        }
+        .blog>div:nth-child(10)>p{
+            color: var(--orange);
+        }
+        /* .blog>div:nth-child(1)>p>span{
+            color: white;
+
+        }
+        .blog>div:nth-child(4)>p>span{
+            color: white;
+
+        }
+        .blog>div:nth-child(7)>p>span{
+            color: white;
+
+        }
+        .blog>div:nth-child(8)>p>span{
+            color: white;
+
+        }
+        .blog>div:nth-child(9)>p>span{
+            color: white;
+
+        } */
+        /* blog utility  */
+    /* blog children ends  */
+
+/* transparent children ends  */
+/* transparent ends  */
+
+/* cards starts  */
+.cards {
+  /* background: violet; */
+  grid-row: 8/9;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 2rem 5rem;
+  gap: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+/* cards left starts  */
+    .cards>.left{
+        grid-column: 1/2;
+        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 0.8rem;
+        padding-right: 5rem;
+    }
+    .cards>.left>h1{
+        font-size: 3rem;
+    }
+    .cards>.left>.border{
+        height: 20px;
+        width: 10rem;
+        background: var(--orange);
+    }
+
+/* cards left ends  */
+
+/* cards right starts  */
+    .cards>.right{
+        padding-top: 6rem;
+        grid-column: 2/3;
+        /* box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; */
+        display: grid;
+        grid-template-rows: 6rem 1fr 5rem;
+    }
+    .cards>.right>h3{
+        font-size: 1.8rem;
+        /* text-align: center; */
+        color: var(--orange);
+    }
+    .cards>.right>.buttons{
+        /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px; */
+        width: 80%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+        align-items: center;
+    }
+    .right>.buttons>button{
+        height: 3rem;
+        width: auto;
+        padding: 0 3rem;
+        border: none;
+        background: black;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        border-radius: 2rem;
+        color: white;
+        font-size: 0.8rem;
+    }
+    .right>p{
+        color: var(--orange);
+    }
+
+/* cards right ends  */
+/* cards ends  */
+
+/* our process starts here  */
+.ourprocess-ok{
+  grid-row: 9/10;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+  .ourprocess-ok>div{
+    /* padding: 1rem; */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    transition: all 0.2s;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .ourprocess-ok>div>i{
+    font-size: 2rem;
+  }
+  .ourprocess-ok>div>p{
+    font-size: 0.8rem;
+  }
+  .ourprocess-ok>div>p>span{
+    font-size: 1rem;
+    font-weight: 700;
+  }
+  .ourprocess-ok>div>button{
+    height: 2.6rem;
+    width: 7rem;
+    border-radius: 40px;
+    border: none;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+    transition: all 0.8s ease;
+    color: #fa99b2;
+    font-weight: 700;
+    font-size: 1rem;
+    background: white;
+    /* background: radial-gradient(#1fe4f5, #3fbafe); */
+    
+  }
+  /* our process children starts  */
+  .ourprocess-ok>div:nth-child(1){
+    grid-column: 1/2;
+    grid-row: 1/2;
+    background: radial-gradient(#1fe4f5, #3fbafe);
+  }
+  .ourprocess-ok>div:nth-child(2){
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background: radial-gradient(#fbc1cc, #fa99b2);
+  }
+    /* div 2 children  */
+
+    /* div 2 children ends  */
+  .ourprocess-ok>div:nth-child(3){
+    grid-column: 1/2;
+    grid-row: 2/3;
+    background: radial-gradient(#76b2fe, #b69efe);
+  }
+  .ourprocess-ok>div:nth-child(4){
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background: radial-gradient(#60efbc, #58d5c9);
+  }
+  .ourprocess-ok>div:nth-child(5){
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background: radial-gradient(#f588d8, #c0a3e5);
+  }
+  .ourprocess-ok>div:nth-child(6){
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background: radial-gradient(#90e8cc, #c0a3e5);
+  }
+  /* out process children ends  */
+/* our process ends  */
+
+/* portfolio ok starts  */
+.portfolio-ok {
+  /* background: pink; */
+  grid-row: 10/11;
+  grid-column: 1/-1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 3rem;
+  padding: 3rem 7rem;
+}
+
+/* portfolio children starts  */
+.portfolio-ok>div{
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+}
+.portfolio-ok>div:nth-child(1){
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+.portfolio-ok>div:nth-child(2){
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.portfolio-ok>div:nth-child(3){
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+.portfolio-ok>div:nth-child(4){
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+.portfolio-ok>div:nth-child(5){
+  grid-column: 1/2;
+  grid-row: 3/4;
+}
+.portfolio-ok>div:nth-child(6){
+  grid-column: 2/3;
+  grid-row: 3/4;
+}
+
+
+
+
+
+/* portfolio children ends  */
+
+/* portfolio ok ends  */
+.footer-ok {
+  background: black;
+  grid-row: 11/12;
+  grid-column: 1/-1;
+}
+
+/* classlist  */
+/* set attribute  */
+#hidden {
+  display: none;
+}
