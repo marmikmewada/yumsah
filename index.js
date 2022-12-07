@@ -192,3 +192,24 @@ frequentlyaskedp.forEach((value, index) => {
 // frequently asked questions ends
 
 // // e.preventDefault();
+
+
+// main menu 
+const menuicon = document.querySelector(".fa-bars");
+const menucloseicon = document.querySelector(".fa-xmark");
+
+const mobilemenu = document.querySelector(".mobile-menu");
+console.log(mobilemenu);
+
+menuicon.addEventListener("click", ()=>{
+  mobilemenu.removeAttribute("id", "hidden");
+  menuicon.setAttribute("id", "hidden");
+  menucloseicon.removeAttribute("id", "hidden");
+})
+menucloseicon.addEventListener("click",()=>{
+  mobilemenu.setAttribute("id", "hidden");
+  menuicon.removeAttribute("id", "hidden");
+  menucloseicon.setAttribute("id", "hidden");
+} )
+
+// main menu ends 
